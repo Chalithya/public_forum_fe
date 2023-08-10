@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  cursor: pointer;
+}
+body {
+  color: #222;
+}
+main {
+  padding: 0;
+  max-width: 90%;
+  margin: 0 auto;
+}
