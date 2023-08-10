@@ -1,7 +1,9 @@
 import "./post.css";
 import { formatISO9075 } from "date-fns";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 import { BASE_URL } from "../../config/config";
+import { UserContext } from "../../context/UserContext";
 
 const Post = ({
   _id,
@@ -12,6 +14,8 @@ const Post = ({
   heading,
   postBody,
 }) => {
+  const { userInfo, setUserInfo } = useContext(UserContext);
+
   return (
     <>
       <div className="post-container">
@@ -24,9 +28,15 @@ const Post = ({
           <div className="heading">
             <div className="heading-container">
               <h2>{heading}</h2>{" "}
-              <Link className="add-comment" to={`/post/${_id}`}>
-                Add comment
-              </Link>
+              {userInfo?.nickname ? (
+                <Link className="add-comment" to={`/post/${_id}`}>
+                  Add comment
+                </Link>
+              ) : (
+                <Link className="add-comment" to={`/login`}>
+                  Login to add comments
+                </Link>
+              )}
             </div>
             <p className="content">{postBody}</p>
             <p className="info">
