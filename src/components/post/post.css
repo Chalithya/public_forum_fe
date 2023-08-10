@@ -1,0 +1,23 @@
+img {
+  width: 80%;
+  max-width: 300px;
+}
+
+.post-container {
+  border-bottom: 5px solid black;
+  margin-bottom: 10px;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.post {
+  margin-bottom: 10px;
+  max-width: 300px;
+}
+
+.textbox {
+  padding: 10px;
+  height: 100%;
+  border: 1px dotted black;
+  box-sizing: border-box; 
+}
