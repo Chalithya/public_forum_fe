@@ -12,7 +12,18 @@ const IndexPage = () => {
       .catch(() => alert("Posts not found"));
   }, []);
 
-  return <>{posts.length > 0 && posts.map((post) => <Post key={post._id} {...post} />)}</>;
+  return (
+    <>
+      {posts.length > 0 ? (
+        posts.map((post) => <Post key={post._id} {...post} />)
+      ) : (
+        <>
+          <h1>No Posts Available</h1>
+          <h3>Login to create posts</h3>
+        </>
+      )}
+    </>
+  );
 };
 
 export default IndexPage;
