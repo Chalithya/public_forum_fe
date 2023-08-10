@@ -5,7 +5,7 @@ import { UserContext } from "../../../context/UserContext";
 import { logOut } from "../../../api/user";
 
 const Header = () => {
-  const { setUserInfo, userInfo } = useContext(UserContext);
+  const { userInfo, setUserInfo } = useContext(UserContext);
 
   const handleLogout = async () => {
     await logOut();

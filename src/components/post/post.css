@@ -28,16 +28,18 @@ h2 {
 
 .heading-container {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 .heading h2 {
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
 .add-comment {
-  padding: 5px;
+  padding: 10px 15px;
   background-color: grey;
-  color: #fff;
+  color: white;
   border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
