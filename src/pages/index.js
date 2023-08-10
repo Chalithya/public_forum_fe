@@ -1,11 +1,11 @@
 import Post from "../components/post/Post";
-import { getAllPosts } from "../api/post";
+import { getAll } from "../api/post";
 import { useEffect, useState } from "react";
 
 const IndexPage = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    getAllPosts()
+    getAll()
       .then((allPosts) => {
         setPosts(allPosts.data.data);
       })

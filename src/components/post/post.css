@@ -19,5 +19,25 @@ img {
   padding: 10px;
   height: 100%;
   border: 1px dotted black;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+.heading-container {
+  display: flex;
+  align-items: center; 
+}
+
+.heading h2 {
+  margin-right: 20px; 
+}
+
+.add-comment {
+  padding: 5px;
+  background-color: grey;
+  color: #fff;
+  border: none;
 }

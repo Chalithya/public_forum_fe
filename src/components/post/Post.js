@@ -12,20 +12,22 @@ const Post = ({
   heading,
   postBody,
 }) => {
-  console.log("cpmmnts", comments, _id);
   return (
     <>
       <div className="post-container">
         <div className="post">
           <div className="image">
-            <Link to={`/post/${_id}`}>
+            <Link to={BASE_URL + "/" + coverImage}>
               <img src={BASE_URL + "/" + coverImage} alt="" />
             </Link>
           </div>
           <div className="heading">
-            <Link to={`/post/${_id}`}>
-              <h2>{heading}</h2>
-            </Link>
+            <div className="heading-container">
+              <h2>{heading}</h2>{" "}
+              <Link className="add-comment" to={`/post/${_id}`}>
+                Add comment
+              </Link>
+            </div>
             <p className="content">{postBody}</p>
             <p className="info">
               <a className="author">
@@ -38,7 +40,7 @@ const Post = ({
         {comments.length > 0 &&
           comments.map((comment) => (
             <div className="textbox" key={comment._id}>
-              {comment.message} by <b>message.author</b>
+              {comment.message} by <b>{comment.author}</b>
             </div>
           ))}
       </div>

@@ -46,7 +46,6 @@ export const logOut = async () => {
         withCredentials: true,
       }
     );
-    console.log("🚀 ~ file: user.js:49 ~ logOut ~ response:", response)
 
     return response;
   } catch (error) {
